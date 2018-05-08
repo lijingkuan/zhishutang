@@ -35,5 +35,11 @@ def sleep(n):
 
 t = do_in_thread(sleep, 2)
 time.sleep(2.5)
+print("线程是否执行完成：%s" % t.is_finished())
 var = t.get_result()
 print(var)
+
+#调用方式  do_in_thread(函数名，参数)
+#如果想获取结果，就get_result
+
+#基本适用于工作中所有对于线程的需求
