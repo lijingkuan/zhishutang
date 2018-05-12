@@ -40,7 +40,7 @@ def a():
 t =  do_in_thread(a)
 t.join()
 
-# join()不加参数，会先执行a函数，再执行最后的print函数
+# join()不加参数，会先执行a函数，再执行最后的print函数，即主线程等线程t执行完之后再执行
 # join(3),则线程阻塞主线程3秒，3秒后执行print函数，函数a的输出在后面
 
 print("测试join")
